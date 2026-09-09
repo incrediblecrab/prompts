@@ -2,15 +2,22 @@
 
 Reusable Markdown instructions for general work and academic research. Use one block on its own or combine the two or three a task needs. Each governs its stated scope; `core` and `preset-v1` are optional, not prerequisites.
 
-The library has two categories: `general/` and `academia/`. The files contain instructions, not executable agents or a framework to install.
+Blocks are organized in `presets/`, `general/`, `visuals/`, and `academia/`. Worked examples live in `example/`. The files contain instructions, not executable agents or a framework to install.
 
-## General
+## Presets
 
-Persona and audience calibration, writing, engineering, and visualization. The Astro/MDX, Plotly, and D3 blocks live here rather than in a separate technology category. General blocks can also support academic work.
+Optional persona, audience, and thinking preferences. Use a preset with whichever task-specific blocks are relevant.
 
 | Block | Use |
 | --- | --- |
-| [preset-v1](general/preset-v1.md) | MIT/Stanford professor persona, named expert audiences, and scalable/modular/KISS/MECE thinking. |
+| [preset-v1](presets/preset-v1.md) | MIT/Stanford professor persona, named expert audiences, and scalable/modular/KISS/MECE thinking. |
+
+## General
+
+Shared audience, writing, engineering, and chart-design guidance, plus Astro/MDX integration. General blocks can also support academic work.
+
+| Block | Use |
+| --- | --- |
 | [core](general/core.md) | Scope, autonomy, evidence, and honest completion. |
 | [orchestrator](general/orchestrator.md) | Bounded delegation, file ownership, deadlines, and safe handoffs. |
 | [end users](general/end-users.md) | Audience, prerequisites, vocabulary, and useful depth. |
@@ -20,8 +27,15 @@ Persona and audience calibration, writing, engineering, and visualization. The A
 | [charts](general/charts.md) | Evidence-led conclusions, clear comparisons, and accessibility. |
 | [verification](general/verification.md) | Observable acceptance criteria, targeted checks, and valid measurements. |
 | [Astro + MDX](general/astro-mdx.md) | Rendering boundaries, version-aware MDX configuration, and navigation lifecycle. |
-| [Plotly](general/plotly.md) | Trace-compatible bundles, efficient updates, UI state, resizing, and cleanup. |
-| [D3](general/d3.md) | DOM ownership, keyed joins, data/scales, responsive layout, and lifecycle cleanup. |
+
+## Visuals
+
+Rendering-library-specific instructions. Pair these with `charts` from `general/` when the task also needs chart-design guidance.
+
+| Block | Use |
+| --- | --- |
+| [D3](visuals/d3.md) | DOM ownership, keyed joins, data/scales, responsive layout, and lifecycle cleanup. |
+| [Plotly](visuals/plotly.md) | Trace-compatible bundles, efficient updates, UI state, resizing, and cleanup. |
 
 ## Academia
 
@@ -63,13 +77,13 @@ For reproducible use, read all selected files from the same repository commit.
 
 ## Example
 
-[Applied Studies and Observations](example-applied-studies.md) is an intentionally broad example. It combines these eight selected blocks, verbatim and in this order: `core`, `orchestrator`, `end-users`, `editorial`, `documentation`, `sources`, `charts`, and `verification`. Project-specific requirements follow them.
+[Applied Studies and Observations](example/example-applied-studies.md) is an intentionally broad example. It combines these eight selected blocks, verbatim and in this order: `core`, `orchestrator`, `end-users`, `editorial`, `documentation`, `sources`, `charts`, and `verification`. Project-specific requirements follow them.
 
-The example does not include every file in `general/`. It does not select the preset, implementation-specific blocks, or academia blocks. Dependency versions and validator counts come from the target project rather than fixed numbers in the prompt.
+The example uses an explicit selection, not every block in the library. It does not select the preset, implementation-specific blocks, or academia blocks. Dependency versions and validator counts come from the target project rather than fixed numbers in the prompt.
 
 ## Maintaining the library
 
-This repository is the canonical source. Edit the Markdown here rather than maintaining a second live copy in the legacy gists.
+This repository is the sole maintained source. Edit the Markdown here.
 
 Work on version branches and merge completed versions into `main` with `--no-ff`. Update this index when adding, renaming, or regrouping a block.
 
@@ -97,7 +111,3 @@ Academic references: [Aletheia prompt examples](https://github.com/google-deepmi
 Recipes have model-specific assumptions and may be demonstrations rather than production implementations. These references are not a universal standard or evidence that this library has been benchmarked on every model.
 
 Evaluate each block alone and representative two- and three-block combinations on the models and hosts you use. Compare task success and evidence quality alongside latency, tool calls, retries, and resource use. Keep a useful rule because it improves results, not because a provider or an older prompt happened to include it.
-
-## Legacy gists
-
-The library moved to this repository on September 9, 2026. The [previous gist index](https://gist.github.com/incrediblecrab/0ead52fe843cb988a86883f79b71359e) and its existing links remain available as frozen snapshots. Only current reviewed Markdown was migrated; historical gist revisions were not imported.
