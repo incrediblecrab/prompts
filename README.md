@@ -2,7 +2,7 @@
 
 Reusable Markdown instructions for general work and academic research. Use one block on its own or combine the two or three a task needs. Each governs its stated scope; `core` and `preset-v1` are optional, not prerequisites.
 
-Blocks are organized in `presets/`, `general/`, `visuals/`, and `academia/`. Worked examples live in `example/`. The files contain instructions, not executable agents or a framework to install.
+Blocks are organized in `presets/`, `general/`, `frameworks/`, `visuals/`, and `academia/`. Worked examples live in `example/`. The files contain instructions, not executable agents or a framework to install.
 
 ## Presets
 
@@ -14,7 +14,7 @@ Optional persona, audience, and thinking preferences. Use a preset with whicheve
 
 ## General
 
-Shared audience, writing, engineering, and chart-design guidance, plus Astro/MDX integration. General blocks can also support academic work.
+Shared audience, writing, engineering, and chart-design guidance. General blocks can also support academic work.
 
 | Block | Use |
 | --- | --- |
@@ -26,7 +26,14 @@ Shared audience, writing, engineering, and chart-design guidance, plus Astro/MDX
 | [sources](general/sources.md) | Primary evidence, citations, retrieval limits, and uncertainty. |
 | [charts](general/charts.md) | Evidence-led conclusions, clear comparisons, and accessibility. |
 | [verification](general/verification.md) | Observable acceptance criteria, targeted checks, and valid measurements. |
-| [Astro + MDX](general/astro-mdx.md) | Rendering boundaries, version-aware MDX configuration, and navigation lifecycle. |
+
+## Frameworks
+
+Framework-specific integration guidance.
+
+| Block | Use |
+| --- | --- |
+| [Astro + MDX](frameworks/astro-mdx.md) | Rendering boundaries, version-aware MDX configuration, and navigation lifecycle. |
 
 ## Visuals
 
