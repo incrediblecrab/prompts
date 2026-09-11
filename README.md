@@ -90,7 +90,7 @@ The example uses an explicit selection, not every block in the library. It does 
 
 This repository is the sole maintained source. Edit the Markdown here.
 
-Work on version branches and merge completed versions into `main` with `--no-ff`. Update this index when adding, renaming, or regrouping a block.
+Commit directly to `main`. This repository keeps no other branches. Update this index when adding, renaming, or regrouping a block.
 
 When a selected block changes, reassemble the affected example from its declared selection in order, followed by its project context. Adding a library block does not automatically add it to an example.
 
