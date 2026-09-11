@@ -2,7 +2,7 @@
 
 Reusable Markdown instructions for general work and academic research. Use one block on its own or combine the two or three a task needs. Each governs its stated scope; `core` and `preset-v1` are optional, not prerequisites.
 
-Blocks are organized in `presets/`, `general/`, `frameworks/`, `visuals/`, and `academia/`. Worked examples live in `example/`. The files contain instructions, not executable agents or a framework to install.
+Blocks are organized in `presets/`, `general/`, `frameworks/`, and `academia/`. Worked examples live in `example/`. The files contain instructions, not executable agents or a framework to install.
 
 ## Presets
 
@@ -14,35 +14,32 @@ Optional persona, audience, and thinking preferences. Use a preset with whicheve
 
 ## General
 
-Shared audience, writing, engineering, and chart-design guidance. General blocks can also support academic work.
+Shared working, writing, documentation, and evidence guidance. General blocks can also support academic work.
 
 | Block | Use |
 | --- | --- |
 | [core](general/core.md) | Scope, autonomy, evidence, and honest completion. |
-| [orchestrator](general/orchestrator.md) | Bounded delegation, file ownership, deadlines, and safe handoffs. |
-| [end users](general/end-users.md) | Audience, prerequisites, vocabulary, and useful depth. |
+| [bary](general/bary.md) | Central supervision, worker isolation, progress deadlines, containment, and safe handoffs. |
 | [editorial](general/editorial.md) | Precise prose, readable structure, and proportionate editing. |
 | [documentation](general/documentation.md) | Reader tasks, Diataxis, canonical sources, and stable navigation. |
-| [sources](general/sources.md) | Primary evidence, citations, retrieval limits, and uncertainty. |
-| [charts](general/charts.md) | Evidence-led conclusions, clear comparisons, and accessibility. |
-| [verification](general/verification.md) | Observable acceptance criteria, targeted checks, and valid measurements. |
+| [sources](general/sources.md) | Primary evidence, citations, retrieval limits, acceptance checks, and valid measurements. |
 
 ## Frameworks
 
-Framework-specific integration guidance.
+Framework, language, and rendering-library implementation guidance. Select the blocks that match the project's actual stack.
 
 | Block | Use |
 | --- | --- |
+| [Angular](frameworks/angular.md) | Component architecture, signals and RxJS, change detection, forms, and hydration. |
 | [Astro + MDX](frameworks/astro-mdx.md) | Rendering boundaries, version-aware MDX configuration, and navigation lifecycle. |
-
-## Visuals
-
-Rendering-library-specific instructions. Pair these with `charts` from `general/` when the task also needs chart-design guidance.
-
-| Block | Use |
-| --- | --- |
-| [D3](visuals/d3.md) | DOM ownership, keyed joins, data/scales, responsive layout, and lifecycle cleanup. |
-| [Plotly](visuals/plotly.md) | Trace-compatible bundles, efficient updates, UI state, resizing, and cleanup. |
+| [D3](frameworks/d3.md) | DOM ownership, keyed joins, data/scales, responsive layout, and lifecycle cleanup. |
+| [Next.js](frameworks/next.md) | Router and runtime boundaries, caching, request data, and server mutations. |
+| [Plotly](frameworks/plotly.md) | Trace-compatible bundles, efficient updates, UI state, resizing, and cleanup. |
+| [React](frameworks/react.md) | Component identity, state and effects, async interactions, and rendering boundaries. |
+| [Rust](frameworks/rust.md) | Toolchains and editions, ownership, unsafe invariants, async execution, and Cargo checks. |
+| [Swift](frameworks/swift.md) | Language modes, actor isolation, concurrency, availability, and target-specific checks. |
+| [TypeScript](frameworks/typescript.md) | Compiler compatibility, runtime validation, module resolution, and declaration contracts. |
+| [Vue](frameworks/vue.md) | Component contracts, reactive state, watcher cleanup, and SSR boundaries. |
 
 ## Academia
 
@@ -63,20 +60,21 @@ Keep each block's rules within its scope. The task's required format and project
 Examples:
 
 - `preset-v1` + `sources`: the usual persona and audience for source-backed analysis.
-- `preset-v1` + `mathematics` + `verification`: mathematical work with the preset's calibration.
+- `preset-v1` + `mathematics` + `sources`: mathematical work with the preset's calibration.
 - `editorial` + `sources`: source-backed writing.
-- `documentation` + `end-users`: documentation for a specified audience.
-- `core` + `orchestrator` + `verification`: coordinated implementation.
-- `charts`: a standalone visualization task with supplied data.
-- `astro-mdx` + `plotly` + `charts`: a Plotly visualization embedded in Astro/MDX.
-- `d3` + `charts`: a custom visualization.
+- `documentation` + `editorial`: reader-facing technical documentation.
+- `core` + `bary` + `sources`: coordinated implementation with checked results.
+- `astro-mdx` + `plotly`: a Plotly visualization embedded in Astro/MDX.
+- `next` + `react` + `typescript`: a Next.js application using mutually supported React and TypeScript versions.
+- `vue` + `typescript`: a Vue application with supported single-file component type checking.
+- `d3` + `typescript`: a custom visualization in a typed codebase.
 - `mathematics` + `sources`: conjectures, literature, and novelty claims.
-- `formal-proof` + `verification`: proof-assistant work with explicit acceptance and trust requirements.
-- `mathematics` + `computational-search` + `verification`: search for constructions or bounds and check the resulting artifacts.
+- `formal-proof` + `sources`: proof-assistant work with explicit acceptance and trust requirements.
+- `mathematics` + `computational-search` + `sources`: search for constructions or bounds and check the resulting artifacts.
 
 Choose the renderer the task needs. Selecting both Plotly and D3 is not a requirement to use both, and they must not compete over the same chart nodes.
 
-Use `orchestrator` for substantial, independent branches, not as a prerequisite to every theorem or search.
+Use `bary` for substantial, independent branches, not as a prerequisite to every theorem or search.
 
 Keep model and host configuration outside the reusable prose. Use the supported message roles and chat template, actual tool schemas, and documented reasoning or output controls. Deadlines, cancellation, write isolation, and hard budgets require host support; a prompt cannot enforce them by itself.
 
@@ -84,7 +82,7 @@ For reproducible use, read all selected files from the same repository commit.
 
 ## Example
 
-[Applied Studies and Observations](example/example-applied-studies.md) is an intentionally broad example. It combines these eight selected blocks, verbatim and in this order: `core`, `orchestrator`, `end-users`, `editorial`, `documentation`, `sources`, `charts`, and `verification`. Project-specific requirements follow them.
+[Applied Studies and Observations](example/example-applied-studies.md) is an intentionally broad example. It combines these five selected blocks, verbatim and in this order: `core`, `bary`, `editorial`, `documentation`, and `sources`. Project-specific requirements follow them.
 
 The example uses an explicit selection, not every block in the library. It does not select the preset, implementation-specific blocks, or academia blocks. Dependency versions and validator counts come from the target project rather than fixed numbers in the prompt.
 
@@ -98,7 +96,9 @@ When a selected block changes, reassemble the affected example from its declared
 
 ## Review basis
 
-Presets record personal working preferences. The other blocks were reviewed for September 8, 2026 using primary guidance and worked examples:
+Presets record personal working preferences. The original blocks were reviewed for September 8, 2026 using primary guidance and worked examples. The Angular, React, Rust, Swift, TypeScript, Next.js, and Vue blocks were reviewed against official documentation on September 9, 2026; their references and review dates appear in each file. The bary block was rewritten against the supervision references below on September 10, 2026.
+
+General review references:
 
 | Publisher | References |
 | --- | --- |
@@ -110,6 +110,8 @@ Presets record personal working preferences. The other blocks were reviewed for 
 | Google | [Gemini prompting guidance](https://ai.google.dev/gemini-api/docs/prompting-strategies) |
 
 Supporting references: [Diataxis](https://diataxis.fr/compass/), [arXiv API terms](https://info.arxiv.org/help/api/tou.html), and [W3C guidance for complex images](https://www.w3.org/WAI/tutorials/images/complex/).
+
+Supervision references: [Temporal activity timeouts and heartbeats](https://docs.temporal.io/encyclopedia/detecting-activity-failures), [fencing tokens for stale writers](https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html), [Claude Code scheduled tasks](https://code.claude.com/docs/en/scheduled-tasks), [goal-directed check-ins](https://code.claude.com/docs/en/goal), [background session isolation](https://code.claude.com/docs/en/agent-view), [subagent context isolation](https://code.claude.com/docs/en/agent-sdk/subagents), [OpenAI background mode](https://developers.openai.com/api/docs/guides/background), [OpenAI rate limits and backoff](https://developers.openai.com/api/docs/guides/rate-limits), and [Anthropic's multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system).
 
 Implementation references: [Astro MDX](https://docs.astro.build/en/guides/integrations-guide/mdx/), [Astro component hydration](https://docs.astro.build/en/guides/framework-components/), [Plotly APIs](https://plotly.com/javascript/plotlyjs-function-reference/), [Plotly bundles](https://github.com/plotly/plotly.js/blob/master/dist/README.md), and [D3's official examples](https://d3js.org/getting-started).
 
