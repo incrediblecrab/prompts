@@ -1,6 +1,6 @@
 # Prompt blocks
 
-Reusable Markdown instructions for general work and academic research. Use one block on its own or combine the two or three a task needs. Each governs its stated scope; `core` and `preset-v1` are optional, not prerequisites.
+Reusable Markdown instructions for general work and academic research. Use one block on its own or combine the two or three a task needs. Each governs its stated scope; `preset-v1` is optional, not a prerequisite.
 
 Blocks are organized in `presets/`, `general/`, `frameworks/`, and `academia/`. Worked examples live in `example/`. The files contain instructions, not executable agents or a framework to install.
 
@@ -14,15 +14,13 @@ Optional persona, audience, and thinking preferences. Use a preset with whicheve
 
 ## General
 
-Shared working, writing, documentation, and evidence guidance. General blocks can also support academic work.
+Shared working, writing, and evidence guidance. General blocks can also support academic work.
 
 | Block | Use |
 | --- | --- |
-| [core](general/core.md) | Scope, autonomy, evidence, and honest completion. |
-| [bary](general/bary.md) | Central supervision, worker isolation, progress deadlines, containment, and safe handoffs. |
-| [editorial](general/editorial.md) | Precise prose, readable structure, and proportionate editing. |
-| [documentation](general/documentation.md) | Reader tasks, Diataxis, canonical sources, and stable navigation. |
-| [sources](general/sources.md) | Primary evidence, citations, retrieval limits, acceptance checks, and valid measurements. |
+| [bary](general/bary.md) | Autonomous scope judgment, delegation, worker supervision, containment, and honest completion. |
+| [editorial](general/editorial.md) | Substantive prose, slop diagnostics, readable structure, and proportionate editing. |
+| [sources](general/sources.md) | Current-date grounding, verification, primary evidence, acceptance checks, and valid measurements. |
 
 ## Frameworks
 
@@ -62,8 +60,7 @@ Examples:
 - `preset-v1` + `sources`: the usual persona and audience for source-backed analysis.
 - `preset-v1` + `mathematics` + `sources`: mathematical work with the preset's calibration.
 - `editorial` + `sources`: source-backed writing.
-- `documentation` + `editorial`: reader-facing technical documentation.
-- `core` + `bary` + `sources`: coordinated implementation with checked results.
+- `bary` + `sources`: autonomous implementation with checked results.
 - `astro-mdx` + `plotly`: a Plotly visualization embedded in Astro/MDX.
 - `next` + `react` + `typescript`: a Next.js application using mutually supported React and TypeScript versions.
 - `vue` + `typescript`: a Vue application with supported single-file component type checking.
@@ -74,7 +71,7 @@ Examples:
 
 Choose the renderer the task needs. Selecting both Plotly and D3 is not a requirement to use both, and they must not compete over the same chart nodes.
 
-Use `bary` for substantial, independent branches, not as a prerequisite to every theorem or search.
+Use `bary` as the default for multi-step work. Its delegation guidance applies where work genuinely splits; a single theorem or search does not need a team.
 
 Keep model and host configuration outside the reusable prose. Use the supported message roles and chat template, actual tool schemas, and documented reasoning or output controls. Deadlines, cancellation, write isolation, and hard budgets require host support; a prompt cannot enforce them by itself.
 
@@ -82,7 +79,7 @@ For reproducible use, read all selected files from the same repository commit.
 
 ## Example
 
-[Applied Studies and Observations](example/example-applied-studies.md) is an intentionally broad example. It combines these five selected blocks, verbatim and in this order: `core`, `bary`, `editorial`, `documentation`, and `sources`. Project-specific requirements follow them.
+[Applied Studies and Observations](example/example-applied-studies.md) is an intentionally broad example. It combines these three selected blocks, verbatim and in this order: `bary`, `editorial`, and `sources`. Project-specific requirements follow them.
 
 The example uses an explicit selection, not every block in the library. It does not select the preset, implementation-specific blocks, or academia blocks. Dependency versions and validator counts come from the target project rather than fixed numbers in the prompt.
 
@@ -96,7 +93,7 @@ When a selected block changes, reassemble the affected example from its declared
 
 ## Review basis
 
-Presets record personal working preferences. The original blocks were reviewed for September 8, 2026 using primary guidance and worked examples. The Angular, React, Rust, Swift, TypeScript, Next.js, and Vue blocks were reviewed against official documentation on September 9, 2026; their references and review dates appear in each file. The bary block was rewritten against the supervision references below on September 10, 2026.
+Presets record personal working preferences. The original blocks were reviewed for September 8, 2026 using primary guidance and worked examples. The Angular, React, Rust, Swift, TypeScript, Next.js, and Vue blocks were reviewed against official documentation on September 9, 2026; their references and review dates appear in each file. The bary block was rewritten against the supervision references below on September 10, 2026, and the editorial block was rewritten the same day from the writing standards below.
 
 General review references:
 
@@ -109,7 +106,9 @@ General review references:
 | DeepSeek | [R1 recommendations](https://github.com/deepseek-ai/DeepSeek-R1#usage-recommendations), [current thinking-mode and tool examples](https://api-docs.deepseek.com/guides/thinking_mode/) |
 | Google | [Gemini prompting guidance](https://ai.google.dev/gemini-api/docs/prompting-strategies) |
 
-Supporting references: [Diataxis](https://diataxis.fr/compass/), [arXiv API terms](https://info.arxiv.org/help/api/tou.html), and [W3C guidance for complex images](https://www.w3.org/WAI/tutorials/images/complex/).
+Supporting references: [arXiv API terms](https://info.arxiv.org/help/api/tou.html).
+
+Writing standards: [Stop the Slop](https://github.com/incrediblecrab/emerson-press/tree/1.0.0/stop-the-slop), covering accuracy, anti-slop diagnostics, formatting, restraint, rhythm, and voice. The editorial block condenses those modules; the full versions carry their own evidence dossiers and worked examples.
 
 Supervision references: [Temporal activity timeouts and heartbeats](https://docs.temporal.io/encyclopedia/detecting-activity-failures), [fencing tokens for stale writers](https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html), [Claude Code scheduled tasks](https://code.claude.com/docs/en/scheduled-tasks), [goal-directed check-ins](https://code.claude.com/docs/en/goal), [background session isolation](https://code.claude.com/docs/en/agent-view), [subagent context isolation](https://code.claude.com/docs/en/agent-sdk/subagents), [OpenAI background mode](https://developers.openai.com/api/docs/guides/background), [OpenAI rate limits and backoff](https://developers.openai.com/api/docs/guides/rate-limits), and [Anthropic's multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system).
 

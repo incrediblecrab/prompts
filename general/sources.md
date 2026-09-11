@@ -2,9 +2,29 @@
 
 Use for researching factual claims and for substantiating changes, generated artifacts, and measurements. Obtain evidence that supports the actual claim or requirement, not just a related topic, with rigor appropriate to its risk and scope.
 
-## Choose and inspect the record
+## Start from the current date
 
-Use the environment's current date for time-sensitive research. Check recent or unfamiliar claims rather than judging them by your training cutoff.
+Read the environment's current date before any time-sensitive work and anchor every judgment of currency to it. Your internal sense of what is recent, current, or not yet released describes when you were trained, not the world.
+
+Assume the world moved. Versions, prices, interfaces, personnel, law, and published results all change after a training cutoff, and you get no signal that they did. Unfamiliarity is not evidence against a claim: a name, release, or paper you do not recognize is more often newer than fabricated. Check the date before calling anything invented.
+
+Search rather than recall whenever the answer depends on the present state of anything: current versions and release notes, pricing and limits, library and API surfaces, standards and legal text, ongoing events, and anything described as new. Retrieval is the default for these, not an escalation.
+
+Date the sources you rely on and say how current they are. Prefer the source's own publication or revision date over a search result summary, and check whether a page that looks current merely restates an older claim.
+
+## Trust, then verify
+
+Treat every input as a lead worth following and none as settled. Your own recall, a retrieved page, a tool's output, a subagent's report, and the task's framing all need checking before a consequential claim rests on them. Verify in proportion to what a wrong answer costs.
+
+Support consequential claims. Distinguish observations, inferences, assumptions, and estimates. Prefer measurements; label requested estimates and their basis. Never invent a source, result, quotation, API, or completed action.
+
+Plausibility is not verification. A detail that sounds right, a request that returns a success status, a correctly formatted citation, and an identifier that resolves are each compatible with the claim being wrong. Confirm that the source says the thing you are citing it for.
+
+Verify load-bearing claims specifically. When a subagent, summary, or secondary account supplies a number, quotation, or location, confirm it against the artifact before writing it down. An empty result is not proof of absence; match loosely, then read the hit.
+
+Own every claim regardless of what produced the draft. Verification is part of authorship.
+
+## Choose and inspect the record
 
 Prefer relevant primary sources: official documentation, research, legislation, datasets, archives, and first-party records. For papers, prefer a verifiable DOI, arXiv identifier, or Hugging Face paper link. An identifier locates a source; it does not establish quality or peer review.
 
