@@ -1,8 +1,8 @@
-# Prompt blocks
+# Bary blocks
 
 Reusable Markdown instructions for implementation, writing, and research. Copy any block on its own or combine only the blocks the task needs. Every block includes the same working contract, so evidence, engineering, and writing standards do not depend on selecting `bary`, `sources`, or the optional preset example.
 
-The six library blocks live in `general/` and `academia/`. An optional calibration example lives in `example/`. These are portable instructions, not an agent runtime; no loader, script, or framework is required.
+The seven library blocks live in `general/` and `academia/`. An optional calibration example lives in `example/`. These are portable instructions, not an agent runtime; no loader, script, or framework is required.
 
 ## Shared contract
 
@@ -20,8 +20,9 @@ Specialist guidance for managing work, writing, and evidence. These deepen the s
 
 | Block | Use |
 | --- | --- |
-| [bary](general/bary.md) | Outcome planning, engineering judgment, selective delegation, capability-aware supervision, and completion. |
+| [bary](general/bary.md) | Task-contract alignment, evidence tracking, selective delegation, safe supervision, 20-minute learning reviews, and completion. |
 | [editorial](general/editorial.md) | Factual fidelity, direct prose, useful structure, and editing without formulaic overcorrection. |
+| [restraint](general/restraint.md) | Input-to-output focus, minimum complete artifacts, actionable requirements, and no unsolicited extras. |
 | [sources](general/sources.md) | Date- and version-aware research, primary evidence, bounded retrieval, and verification of actual outcomes. |
 
 ## Academia
@@ -47,6 +48,8 @@ Apply the shared contract to all work, select relevant specialist guidance, and 
 Examples:
 
 - `editorial` + `sources`: source-backed writing.
+- `restraint` + `sources`: a direct, evidence-backed answer or mapping without an explanatory report.
+- `restraint` + `editorial`: a concise, actionable document without ornamental prose or extra sections.
 - `bary` + `sources`: autonomous implementation with checked results.
 - `bary` + `editorial` + `sources`: a multi-step writing project with verified claims.
 - `mathematics` + `sources`: conjectures, literature, and novelty claims.
@@ -55,13 +58,17 @@ Examples:
 
 Use `bary` when the task needs planning, delegation, or sustained recovery. Give workers only their task context and applicable blocks, not the coordinator's entire prompt. A single theorem, lookup, or small edit does not need a team.
 
+For long-running work, `bary` includes a default 20-minute scheduled learning prompt where the host supports bounded scheduling. This working preference is not a measured optimum or a keepalive mechanism. Completion and failure handling remain immediate.
+
+Use `restraint` to reduce unnecessary work and presentation, not required scope, evidence, accessibility, or functionality. It does not shorten an explicitly requested detailed deliverable into an incomplete one.
+
 Keep model and host configuration outside the reusable prose. Use the supported message roles and chat template, actual tool schemas, and documented reasoning or output controls. Deadlines, cancellation, write isolation, and hard budgets require host support; a prompt cannot enforce them by itself.
 
 For reproducible use, read all selected files from the same repository commit.
 
 ## Example
 
-[Preset v1](example/preset-v1.md) illustrates optional expert-reader calibration and working style. Combine it with relevant blocks when that audience fits. It changes defaults, not the task, available capabilities, or evidence standards; the library does not require it.
+[Preset v1](example/preset-v1.md) preserves the MIT/Stanford professor working style, named expert audiences, and KISS/MECE thinking preferences. Combine it with relevant blocks when that calibration fits. It changes defaults, not the task, available capabilities, or evidence standards; the library does not require it.
 
 ## Maintaining the library
 
@@ -76,6 +83,10 @@ Review monthly against current primary guidance and actual model and host behavi
 ## Review basis
 
 The preset example records working preferences. The original blocks were reviewed for September 8, 2026 using primary guidance and worked examples. The general blocks and shared composition contract were revised on September 10, 2026 using the prompting, supervision, and writing references below.
+
+Research mechanisms reviewed on September 10, 2026 include [VeLO's learned optimization](https://arxiv.org/abs/2211.09760v1), [AREX v3's recursive research](https://arxiv.org/abs/2607.21461v3), and [AlphaEvolve's evaluator-guided program search](https://arxiv.org/abs/2506.13131v1). AREX v3 was revised on September 1, 2026 and describes a trained research policy, not a generic reflection prompt. Trained update rules, inference-time research, and scheduled reviews are different mechanisms; these Markdown instructions do not reproduce the papers' training or benchmark results.
+
+The [Navier-Stokes and Euler repository at its September 10 revision](https://github.com/openai/NavierStokesAndEuler/tree/f9e8bc5b38b6e212696e8a30e3e91517af887bbd) separates reference challenges from submitted proofs. Its [Comparator configuration](https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/ComparatorChallenges/NavierStokes.json) enables independent checking and restricts permitted axioms; its [metadata](https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/formalization.yaml) labels review as self-assessed. The paper and verification interfaces were inspected, not independently re-proved or executed. The transferable lesson is contract alignment and checked artifacts, not an inferred training method or 20-minute research schedule.
 
 General review references:
 
