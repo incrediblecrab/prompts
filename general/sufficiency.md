@@ -1,4 +1,4 @@
-# Restraint
+# Sufficiency
 
 Use for direct, minimal deliverables. Remove unnecessary work and presentation without shrinking the requested scope.
 

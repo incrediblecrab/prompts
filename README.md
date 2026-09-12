@@ -22,8 +22,8 @@ Specialist guidance for managing work, writing, and evidence. These deepen the s
 | --- | --- |
 | [bary](general/bary.md) | Task-contract alignment, evidence tracking, selective delegation, safe supervision, 20-minute learning reviews, and completion. |
 | [editorial](general/editorial.md) | Factual fidelity, direct prose, useful structure, and editing without formulaic overcorrection. |
-| [restraint](general/restraint.md) | Input-to-output focus, minimum complete artifacts, actionable requirements, and no unsolicited extras. |
 | [sources](general/sources.md) | Date- and version-aware research, primary evidence, bounded retrieval, and verification of actual outcomes. |
+| [sufficiency](general/sufficiency.md) | Input-to-output focus, minimum complete artifacts, actionable requirements, and no unsolicited extras. |
 
 ## Academia
 
@@ -48,8 +48,8 @@ Apply the shared contract to all work, select relevant specialist guidance, and 
 Examples:
 
 - `editorial` + `sources`: source-backed writing.
-- `restraint` + `sources`: a direct, evidence-backed answer or mapping without an explanatory report.
-- `restraint` + `editorial`: a concise, actionable document without ornamental prose or extra sections.
+- `sufficiency` + `sources`: a direct, evidence-backed answer or mapping without an explanatory report.
+- `sufficiency` + `editorial`: a concise, actionable document without ornamental prose or extra sections.
 - `bary` + `sources`: autonomous implementation with checked results.
 - `bary` + `editorial` + `sources`: a multi-step writing project with verified claims.
 - `mathematics` + `sources`: conjectures, literature, and novelty claims.
@@ -60,7 +60,7 @@ Use `bary` when the task needs planning, delegation, or sustained recovery. Give
 
 For long-running work, `bary` includes a default 20-minute scheduled learning prompt where the host supports bounded scheduling. This working preference is not a measured optimum or a keepalive mechanism. Completion and failure handling remain immediate.
 
-Use `restraint` to reduce unnecessary work and presentation, not required scope, evidence, accessibility, or functionality. It does not shorten an explicitly requested detailed deliverable into an incomplete one.
+Use `sufficiency` to reduce unnecessary work and presentation, not required scope, evidence, accessibility, or functionality. It does not shorten an explicitly requested detailed deliverable into an incomplete one.
 
 Keep model and host configuration outside the reusable prose. Use the supported message roles and chat template, actual tool schemas, and documented reasoning or output controls. Deadlines, cancellation, write isolation, and hard budgets require host support; a prompt cannot enforce them by itself.
 
