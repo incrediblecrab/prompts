@@ -20,7 +20,7 @@ Specialist guidance for managing work, writing, and evidence. These deepen the s
 
 | Block | Use |
 | --- | --- |
-| [bary](general/bary.md) | Task-contract alignment, evidence tracking, selective delegation, safe supervision, 20-minute learning reviews, and completion. |
+| [bary](general/bary.md) | Task-contract alignment, evidence tracking, selective delegation, safe supervision, 20-minute learning reviews, learned optimization, and completion. |
 | [editorial](general/editorial.md) | Factual fidelity, direct prose, useful structure, and editing without formulaic overcorrection. |
 | [sources](general/sources.md) | Date- and version-aware research, primary evidence, bounded retrieval, and verification of actual outcomes. |
 | [sufficiency](general/sufficiency.md) | Input-to-output focus, minimum complete artifacts, actionable requirements, and no unsolicited extras. |
